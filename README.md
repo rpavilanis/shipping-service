@@ -23,11 +23,9 @@ Build a stand-alone shipping service API that calculates estimated shipping cost
 ## Project Baseline
 When you've accomplished all of the baseline requirements, please issue a PR back to the bEtsy team's fork. We will review and merge your baseline, but you don't need to wait for that to happen before helping your classmates and moving on to the project requirements.
 
-### The baseline requirements are...
-- a ruby-gemset and ruby-version.
-- a new rails 4.2.5 application.
-- [rspec](https://github.com/rspec/rspec-rails) setup in document format (hint: use a .rspec config file and the `rspec_rails` gem)
-- [factory_girl](https://github.com/thoughtbot/factory_girl_rails) included and set up to work with rspec
+### Baseline Requirements
+- a Ruby gemset that locks the Ruby version to 2.3.1
+- a new Rails 4.2.6 application, configured to use Postgres as its database.
 - [simplecov](https://github.com/colszowka/simplecov) for code coverage reporting
 - create a NEW fork from the original bEtsy team's fork
   - your team will work on the new fork and issue PRs back to the original team's fork rather than the project master
@@ -41,7 +39,7 @@ Given shipping addresses and a set of packages, generate a quote for the cost of
 ## Requirements
 ### Technical Requirements
 #### Your API will:
-- Respond with JSON and proper HTTP response codes  
+- Respond with JSON and meaningful HTTP response codes  
 - Allow Users to get shipping cost quotes for different delivery types (standard, express, overnight, etc.)
 - Allow Users to get a cost comparison of two or more carriers  
 - Log all requests and their associated responses such that an audit could be conducted  
@@ -57,7 +55,7 @@ Given shipping addresses and a set of packages, generate a quote for the cost of
   - Tracking information (when available)
 
 ### Testing
-- 95% test coverage for all API Controller routes, Model validations, and Model methods
+- 95% test coverage for all API Controller actions, Model validations, and Model methods
 
 ### Added Fun!
 - Do some refactoring of the bEtsy project you're working on

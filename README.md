@@ -1,5 +1,5 @@
 # Shipping Service API
-Build a stand-alone shipping service API that calculates estimated shipping cost for an order from another team's bEtsy application.
+Build a stand-alone shipping service API that calculates estimated shipping cost for the bEtsy application, Petsy.
 
 ## Learning Goals
 - Develop the ability to read 3rd party code
@@ -21,17 +21,14 @@ Build a stand-alone shipping service API that calculates estimated shipping cost
 - Integrate the [ActiveShipping](https://github.com/Shopify/active_shipping) gem to do shipping-specific logic for you
 
 ## Project Baseline
-When you've accomplished all of the baseline requirements, please issue a PR back to the bEtsy team's fork. We will review and merge your baseline, but you don't need to wait for that to happen before helping your classmates and moving on to the project requirements.
 
 ### Baseline Requirements
 - a Ruby gemset that locks the Ruby version to 2.3.1
-- a new Rails 4.2.6 application, configured to use Postgres as its database.
+- a new Rails 4.2.7 application
 - [simplecov](https://github.com/colszowka/simplecov) for code coverage reporting
-- create a NEW fork from the original bEtsy team's fork
-  - your team will work on the new fork and issue PRs back to the original team's fork rather than the project master
-- create a preliminary Heroku deployment of the bEtsy project
-- review bEtsy code to come up with a basic understanding of the current checkout user flow
-  - feel free to ask the original bEtsy team questions, but be sure you are prepared to ask them specific questions. Remember, the original developers are on a new team now and are just as busy with new work as you are.
+- create a NEW fork from Petsy
+- create a preliminary Heroku deployment of Petsy
+- review Petsy code to come up with a basic understanding of the current checkout user flow
 
 ## Expectations
 Given shipping addresses and a set of packages, generate a quote for the cost of shipping for these items for a given shipper.
@@ -58,6 +55,5 @@ Given shipping addresses and a set of packages, generate a quote for the cost of
 - 95% test coverage for all API Controller actions, Model validations, and Model methods
 
 ### Added Fun!
-- Do some refactoring of the bEtsy project you're working on
 - Allow merchants to view the total shipping costs for all of their products in a particular order
-- Find the seam in bEtsy app between the shopping and payment processing, and build a payment processing service
+- Find the seam in Petsy between the shopping and payment processing, and build a payment processing service

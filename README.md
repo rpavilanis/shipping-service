@@ -1,5 +1,5 @@
 # Shipping Service API
-Build a stand-alone shipping service API that calculates estimated shipping cost for the bEtsy application, Petsy.
+Build a stand-alone shipping service API that calculates estimated shipping costs. Then, implement your shipping service API into the provided bEtsy application, Petsy.
 
 ## Learning Goals
 - Develop the ability to read 3rd party code
@@ -16,24 +16,24 @@ Build a stand-alone shipping service API that calculates estimated shipping cost
 ## Guidelines
 - Practice TDD to lead the development process for Models and Controllers
 - Create user stories and keep the stories up-to-date throughout the project
-- Deploy on Heroku
-- Shipping API will communicate with the bEtsy app via JSON
+- Have two Heroku depoloyments, Petsy and Shipping API
+- Shipping API will communicate with Petsy via JSON
 - Integrate the [ActiveShipping](https://github.com/Shopify/active_shipping) gem to do shipping-specific logic for you
 
 ## Project Baseline
+Setup both rails applications Before building and implementing your shipping API. One rails app will be the provided Betsy project, Petsy. The other will be from scratch, for your Shipping API. 
 
 ### Baseline Requirements
-- a Ruby gemset that locks the Ruby version to 2.3.1
-- a new Rails 4.2.7 application
-- [simplecov](https://github.com/colszowka/simplecov) for code coverage reporting
-- create a NEW fork from Petsy
-- create a preliminary Heroku deployment of Petsy
-- review Petsy code to come up with a basic understanding of the current checkout user flow
+- a new Rails 4.2.7 application for your API
+    - a Ruby gemset that locks the Ruby version to 2.3.1
+    - [simplecov](https://github.com/colszowka/simplecov) for code coverage reporting
+- create a NEW fork from [Petsy](https://github.com/Ada-C6/betsy-shipping)
+    - host your forked Petsy app on Heroku
+    - review Petsy code to come up with a basic understanding of the current checkout user flow
 
-## Expectations
-Given shipping addresses and a set of packages, generate a quote for the cost of shipping for these items for a given shipper.
+## Project Expectations
+Your API should generate a quote with options of shipping services and thier cost by different carriers. The quote will be based on given addresses and a set of packages. Then, implement your API into Petsy. 
 
-## Requirements
 ### Technical Requirements
 #### Your API will:
 - Respond with JSON and meaningful HTTP response codes  
@@ -44,8 +44,8 @@ Given shipping addresses and a set of packages, generate a quote for the cost of
   - When a User's request is incomplete, return an appropriate error
   - When a User's request does not process in a timely manner, return an appropriate error
 
-#### Your bEtsy application will:
-- Integrate packaging estimates into the checkout workflow to be able to utilize the shipping API
+#### Your Petsy application will:
+- Integrate shipping estimates into the checkout workflow using your shipping API
 - Present the relevant shipping information to the user during the checkout process
   - Cost
   - Delivery estimate

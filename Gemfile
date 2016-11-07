@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# 'zipcodes'
+gem 'zip-codes'
 # oAuth
 gem "omniauth"
 gem "omniauth-github"

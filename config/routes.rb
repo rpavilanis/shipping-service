@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'shipments' => 'shipments#calculator'
 
+  get 'shipments/logger' => 'shipments#logger'
+
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

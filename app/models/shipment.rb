@@ -13,12 +13,20 @@ SIZE = [10, 10, 10]
     ActiveShipping::Location.new(country: "USA", state: "OR", city: "Eugene", zip: "97405")
   end
 
+  # def self.destination
+  #   ActiveShipping::Location.new(country: "USA", state: params[:state], city: params[:city], zip: params[:zip])
+  # end
+
   def self.destination
-    ActiveShipping::Location.new(country: "USA", state: params[:state], city: params[:city], zip: params[:zip])
+    ActiveShipping::Location.new(country: "USA", state: "OR", city: "Eugene", zip: "97405")
   end
 
+  # def self.packages
+  #  ActiveShipping::Package.new(weight: params[:weight], SIZE)
+  # end
+
   def self.packages
-   ActiveShipping::Package.new(weight: params[:weight], SIZE)
+   ActiveShipping::Package.new(7.5, SIZE)
   end
 
   def self.get_rates_from_shipper(shipper)

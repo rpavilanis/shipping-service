@@ -14,7 +14,15 @@ class ShipmentsController < ApplicationController
   end
 
   def logger
-    # ActiveShipping::USPS.logger = Logger.new($stdout)
+    # should log all quotes that are made - not sure about requests?
     logs = Shipment.all
+
+    if logs
+        render :json => logs.as_json, :status => :ok
+    else
+      render :json => [], :status => :no_content
+    end
+
+
   end
 end

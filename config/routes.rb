@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  /shipping/:service_id?from_zip=49120&to_zip=97405 - show (getting a shipping quote)
+  # /shipping/:service_id?from_zip=49120&to_zip=97405 - show (getting a shipping quote)
 
+  get 'shipments' => 'shipments#calculator'
 
 
   # You can have the root of your site routed with "root"

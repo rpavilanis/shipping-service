@@ -11,6 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20161108005348) do
+
+  create_table "shipments", force: :cascade do |t|
+    t.string   "request"
+    t.string   "weight"
+    t.string   "float"
+    t.string   "response"
+    t.string   "string"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

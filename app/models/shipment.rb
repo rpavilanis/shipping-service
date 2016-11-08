@@ -14,26 +14,16 @@ SIZE = [10, 10, 10]
   end
 
   def self.destination
-    ActiveShipping::Location.new(country: "USA", state: "OR", city: "Eugene", zip: "97401")
+    ActiveShipping::Location.new(country: "USA", state: params[:state], city: params[:city], zip: params[:zip])
   end
 
-  # def destination
-  #   ActiveShipping::Location.new(country: location["country"], state: location["state_code"], city: location["city"], zip: location["zip"])
-  # end
-
-  # def packages
-  #   package = ActiveShipping::Package.new(package["weight"], SIZE)
-  #
-  # end
-
   def self.packages
-   ActiveShipping::Package.new(7.5, SIZE)
+   ActiveShipping::Package.new(weight: params[:weight], SIZE)
   end
 
   def self.get_rates_from_shipper(shipper)
     shipper.find_rates(origin, destination, packages)
-    # This returns an array of arrays - don't think we actually want to return this, even though it seems cleaner on my end.   response.rates.sort_by(&:price).collect {|rate| [rate.service_name, rate.price]}
-
+    # This returns an array of arrays - don't think we actually want to return this, even though it seems cleaner on this end - better to allow app to choose what to display/use.   response.rates.sort_by(&:price).collect {|rate| [rate.service_name, rate.price]}
   end
 
   def self.ups_rates
@@ -46,13 +36,9 @@ SIZE = [10, 10, 10]
     get_rates_from_shipper(usps)
   end
 
-
 # private
 # find info based on zip using gem
   # def find_address_info
   #   address = ZipCodes.identify(:zip)
   # end
-
-
-
 end

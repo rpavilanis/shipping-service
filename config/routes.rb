@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   # /shipping/:service_id?from_zip=49120&to_zip=97405 - show (getting a shipping quote)
   #
   # get 'shipments/:service_id?from_zip=49120&to_zip=97405' => 'shipments#calculator'
+# ?country=US&state=MI&city=Niles&postal_code=49120
 
+  # url to put in browser is: http://localhost:3000/shipments/?country=US&state=MI&city=Niles&postal_code=49120
   get 'shipments/', to: 'shipments#calculator'
   get 'shipments/logger', to: 'shipments#logger'
 

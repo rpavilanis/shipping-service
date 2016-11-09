@@ -27,9 +27,4 @@ class ShipmentsController < ApplicationController
     end
 
   end
-
-
-  def shipment_params
-    params.permit(location: [:city, :state, :zip], package: [:weight])
-  end
 end

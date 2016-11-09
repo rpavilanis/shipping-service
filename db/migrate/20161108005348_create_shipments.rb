@@ -2,8 +2,7 @@ class CreateShipments < ActiveRecord::Migration
   def change
     create_table :shipments do |t|
       t.string :request
-      t.string :weight
-      t.string :float
+      t.float :weight
       t.string :response
       t.string :string
 

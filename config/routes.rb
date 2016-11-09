@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # /shipping/:service_id?from_zip=49120&to_zip=97405 - show (getting a shipping quote)
+  #
+  # get 'shipments/:service_id?from_zip=49120&to_zip=97405' => 'shipments#calculator'
 
-  get 'shipments' => 'shipments#calculator'
-
-  get 'shipments/logger' => 'shipments#logger'
+  get 'shipments/', to: 'shipments#calculator'
+  get 'shipments/logger', to: 'shipments#logger'
 
 
   # You can have the root of your site routed with "root"

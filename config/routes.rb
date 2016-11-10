@@ -2,15 +2,9 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # /shipping/:service_id?from_zip=49120&to_zip=97405 - show (getting a shipping quote)
-  #
-  # get 'shipments/:service_id?from_zip=49120&to_zip=97405' => 'shipments#calculator'
-# ?country=US&state=MI&city=Niles&postal_code=49120
-
-  # url to put in browser is: http://localhost:3000/shipments/?country=US&state=MI&city=Niles&postal_code=49120
+  # url to put in browser is: http://localhost:3000/shipments/?country=US&state=OR&city=Eugene&postal_code=97403&weight=20
   get 'shipments/', to: 'shipments#calculator'
   get 'shipments/logger', to: 'shipments#logger'
-
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

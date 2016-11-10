@@ -3,13 +3,9 @@
 one:
   request: MyString
   weight: MyString
-  float: MyString
   response: MyString
-  string: MyString
 
 two:
   request: MyString
   weight: MyString
-  float: MyString
   response: MyString
-  string: MyString

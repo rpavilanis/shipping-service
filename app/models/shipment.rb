@@ -4,10 +4,6 @@ class Shipment < ActiveRecord::Base
 SIZE = [10, 10, 10]
 ORIGIN = ActiveShipping::Location.new(country: "US", state: "OR", city: "Eugene", postal_code: "97405")
 
-  # def self.origin
-  #   ActiveShipping::Location.new(country: "USA", state: "OR", city: "Eugene", zip: "97405")
-  # end
-
   def self.destination(country, state, city, postal_code)
     ActiveShipping::Location.new(country: country, state: state, city: city, postal_code: postal_code)
   end

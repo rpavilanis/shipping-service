@@ -1,8 +1,8 @@
 class ShipmentsController < ApplicationController
 after_action :logger
-  # use information from model to create estimates to be passed to app
+    # use information from model to create estimates to be passed to app
   def calculator
-    # define variable with params coming in from
+    # define variables with params coming in from app
     # set_package = Shipment.packages( params[:weight], params[:size])
     weight = params[:weight].to_i
     set_destination = Shipment.destination( params[:country], params[:state], params[:city], params[:postal_code] )
